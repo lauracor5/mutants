@@ -40,7 +40,7 @@ _al finalizar el analisis del ADN se entregara una respuesta true o false, esta 
 #### Instrucciones Ejecución Api rest en docker
 ```
 cd ms-mutantsN2
-mvn clean install
+mvn -DskipTests clean install
 cd..
 cd ms -ms-mutantsN3
 cd..
