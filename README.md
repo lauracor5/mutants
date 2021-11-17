@@ -63,8 +63,8 @@ _Esta Api cuenta con un servicio  de tipo Post url "http://localhost:8001/mutant
 }
 ```
 
-_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200_
-_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403_
+_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200,_
+_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403,_
 _Si el ADN enviado tiene algun caracter no permitido el servicio http respone com un BAD REQUEST 400_
 
 ##### Nivel 3
@@ -87,8 +87,8 @@ _servicio encargado de entrgar la respuesta si el adn ingresado por el cliente h
 
 }
 ```
-_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200_
-_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403_
+_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200,_
+_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403,_
 _Si el ADN enviado tiene algun caracter no permitido el servicio http respone com un BAD REQUEST 400_
 
 ```
@@ -120,8 +120,8 @@ _ se envia como request de la siguiente manera_
         "TCACTG"]
 
 }
-_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200_
-_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403_
+_Si el ADN enviado pertenece a un mutante el servicio http respone com un ok 200,_
+_Si el ADN enviado pertenece a un humano el servicio http respone com un FORBIDEN 403,_
 _Si el ADN enviado tiene algun caracter no permitido el servicio http respone com un BAD REQUEST 400_
 ```
 Get url: "https://mutantsspringgcpn3.rj.r.appspot.com/stats"
@@ -136,12 +136,14 @@ _" este servicio nos ofrece las estadisiticas cuantos humanos y mutantes se han 
 ```
 ##  pruebas
 
-_Para las pruebas unitarias se utilizó: Junit5, mockito_
-_covertura de codigo Api rest :  herramienta utilizada  ide Intellij idea para covertura de codigo_
-_Se anexan reporte por cada prueba unitaria en el repositorio_
-_Nievl1 carpeta reporteTest - Nivel1- archivo: index.html_
-_Nievl2 carpeta reporteTest - Nivel2- archivo: index.html_
-_Nievl3 carpeta reporteTest - Nivel3- archivo: index.html_
+_Para las pruebas unitarias se utilizó: Junit5, mockito,_
+_covertura de codigo Api rest :  herramienta utilizada  ide Intellij idea para covertura de codigo,_
+_Se anexan reporte por cada prueba unitaria en el repositorio,_
+_Nievl1 carpeta reporteTest - Nivel1- archivo: index.html,_
+_Nievl2 carpeta reporteTest - Nivel2- archivo: index.html,_
+_Nievl3 carpeta reporteTest - Nivel3- archivo: index.html,_
+
+_Se agregan colecciones de postman en el repositorio (carpeta: coleccionesPostman)_
 
 ## Despliegue 📦
 

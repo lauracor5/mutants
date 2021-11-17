@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "1b414ef2-b91f-4673-9cd9-b446daefd34a",
+		"name": "mutantsNivel3-dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stats",
+			"item": [
+				{
+					"name": "http://localhost:8080/mutant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTG\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "response 400",
+			"item": [
+				{
+					"name": "http://localhost:8080/mutant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTJ\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/mutant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"mutant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/mutant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTJ\"]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/mutant",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"mutant"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Nov 2021 07:15:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Allowed values(A, T, C, G, C)\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "response 403",
+			"item": [
+				{
+					"name": "http://localhost:8080/mutant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\r\n        \"GTGCGT\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"TCCCTA\",\r\n        \"TCACTT\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/mutant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"mutant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/mutant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dna\": [\r\n        \"GTGCGT\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"TCCCTA\",\r\n        \"TCACTT\"]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/mutant",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"mutant"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 15 Nov 2021 01:24:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "response 200",
+			"item": [
+				{
+					"name": "http://localhost:8080/mutant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTG\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8001/mutant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"mutant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/mutant",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTG\"]\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8001/mutant",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8001",
+									"path": [
+										"mutant"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 17 Nov 2021 07:15:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
