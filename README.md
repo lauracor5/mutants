@@ -6,20 +6,21 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 
 ### Pre-requisitos 📋
-_Maven_
-_JDK 11_
-_DOCKER_
-_POSTMAN_
+_Maven,_
+_JDK 11,_
+_docker -  docker-compose,_
+_Postman_
 
 
 ### Instalación 🔧
 ###1.Ejecución Local_
-__git clone https://github.com/lauracor5/mutants.git__
+__git clone --branch develop https://github.com/lauracor5/mutants.git__
 
 #### Nivel 1
 #### Instrucciones Ejecución En consola Consola
-_cd mutantsN1_
+
 ```
+cd mutantsN1
 mvn clean install
 cd target
 java -jar mutantsN1-1.0-SNAPSHOT.jar
@@ -31,7 +32,7 @@ Enter the length of the table => solo acepta núemros (ejemplo 6)
 _si no se ingresa un valor, el programa vuelve a pedir un valor valido, esta longitud, será el número de filas y columnas que tendrá nuestra tabla, despues de ingresar este valor se pedirá la información por filas del adn que se va analizar_
 
 ```
-_Enter the row values 0 Allowed values (A, T, C, G, C) =>Deacuerdo a la longitud ingresada será el numero ce caracteres que se reciben por filas, si se ingresa un valor no permitido, se volveran a pedir los datos de la fila_
+Enter the row values 0 Allowed values (A, T, C, G, C) =>Deacuerdo a la longitud ingresada será el numero ce caracteres que se reciben por filas, si se ingresa un valor no permitido, se volveran a pedir los datos de la fila
 ```
 _al finalizar el analisis del ADN se entregara una respuesta true o false, esta esta se imprimirá en la consola_
 
