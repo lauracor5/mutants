@@ -1,0 +1,30 @@
+version: "3.7"
+services:
+  mysql:
+    image: "mysql:5.7.36"
+    restart: always
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: holamundo1
+      MYSQL_ROOT_PASSWORD: holamundo1
+      MYSQL_DATABASE: mutants
+  mutantsn2:
+    build: ./ms-mutantsN2
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx128000K
+    restart: always
+    ports:
+      - "8001:8001"
+  mutantsn3:
+    build: ./ms-mutantsN3
+    environment:
+      - JAVA_TOOL_OPTIONS=-Xmx128000K
+    restart: always
+    ports:
+      - "8002:8002"
+    depends_on:
+      - mysql      
+      
+  
