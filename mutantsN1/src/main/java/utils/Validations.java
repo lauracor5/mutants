@@ -2,7 +2,18 @@ package utils;
 
 import java.util.Scanner;
 
+/**
+ * @author: Laura Córdoba
+ * @version 1
+ * Clase encargada de validar la entrada de los datos del arreglo Strin[] dna
+ *
+ */
 public class Validations {
+
+    /**
+     * Se le indica al usuario que ingrese los valores del dna para cada fila
+     * @return arreglo de dna validado
+     */
     public String[] insertDna() {
         Scanner sc = new Scanner(System.in);
         int longTable = validateLongTable();
@@ -24,6 +35,13 @@ public class Validations {
         return dnaArray;
     }
 
+    /**
+     * Valida que solo se inserten caracteres permitidos "A, T, C, G, C"
+     * @param row fila del arreglo
+     * @param columns tamaño del arreglo
+     * @return false si los valores ingresados en la fila no cumplen con la longitud del tamaño de arreglo
+     * o si encuentra un caracter no permitido
+     */
     public boolean validateArrayCharacter(String row, int columns) {
         row = row.toUpperCase();
         boolean validate = true;
@@ -42,6 +60,11 @@ public class Validations {
         return validate;
     }
 
+    /**
+     * Se le pide al usuario que ingrese el tamaño del arreglo, debe ser un valor numerico, si es diferente
+     * se le pedira de nuevo al usuario un valor permitid
+     * @return el tamaño del arreglo del dna
+     */
     private int validateLongTable() {
         Scanner sc = new Scanner(System.in);
         String valueLongTable;
@@ -59,6 +82,10 @@ public class Validations {
         return Integer.parseInt(valueLongTable);
     }
 
+    /**
+     * @param value valor del tamaño de arreglo ingresado por el usuario
+     * @return false si el valor ingresado por consola no es numerico
+     */
     private boolean isNumeric(String value) {
         try {
             Integer.parseInt(value);

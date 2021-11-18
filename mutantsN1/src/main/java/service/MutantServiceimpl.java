@@ -1,8 +1,23 @@
 package service;
 
 import java.util.ArrayList;
-
+/**
+ *  @author: Laura Córdoba
+ *  @version 1
+ *  Clase encarga de implementar la logica para averiguar si un dna pertenece a un mutante
+ */
 public class MutantServiceimpl implements MutantService {
+
+    /**
+     * Se utiliza la variable sequencesFound para guardar las secuencias que se van encontrando, cuando
+     * este contador es superior a 1 se acaba el proceso y retorna un true
+     * Primero se analiza cada fila del arreglo para buscar secuencias y actualiza el contador sequencesFounD,
+     * si el contandor no es mayor a 1 se continua con el proceso pasando el arreglo a una matriz, se leen las
+     * columnas de esta tabla para buscar secuencias y actualiza el contador sequencesFounD,
+     * si el contandor no es mayor a 1 se analiza esta matriz de forma oblicua y continua buscando una secuencia
+     * @param dna arreglo de String para averiguar si el dna es de un mutante
+     * @return true si el dna ingresado pertenece a mutante, si pertenece a un humano
+     */
     @Override
     public boolean isMutant(String[] dna) {
         int sequencesFound;
