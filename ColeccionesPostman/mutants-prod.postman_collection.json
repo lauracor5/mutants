@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "40544ad2-a848-4617-ad60-8b7d70dbac0f",
+		"_postman_id": "2030c0a4-7c16-4c91-9f84-fadc4a86f344",
 		"name": "mutants-prod",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -117,42 +117,24 @@
 			"name": "stats",
 			"item": [
 				{
-					"name": "http://localhost:8080/mutant",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"dna\": [\r\n        \"ATGCGA\",\r\n        \"CAGTGC\",\r\n        \"TTATGT\",\r\n        \"AGAAGG\",\r\n        \"CCCCTA\",\r\n        \"TCACTG\"]\r\n\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/stats",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"stats"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "New Request",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "https://mutantsspringgcpn3.rj.r.appspot.com/stats",
+							"protocol": "https",
+							"host": [
+								"mutantsspringgcpn3",
+								"rj",
+								"r",
+								"appspot",
+								"com"
+							],
+							"path": [
+								"stats"
+							]
+						}
 					},
 					"response": []
 				}
